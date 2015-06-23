@@ -1,0 +1,11 @@
+// grabacion de audio 
+ %crea un objeto de audio
+    entrada_nueva = audiorecorder(11025,16,1);
+    disp('COMIENCE A HABLAR')
+    record(entrada_nueva);
+    stop(entrada_nueva);
+    %Inicia la grabacion
+    recordblocking(entrada_nueva, 3);
+    %Obtengo datos en el vector
+    yy = getaudiodata(entrada_nueva,'double');
+    
